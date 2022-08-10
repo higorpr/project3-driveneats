@@ -1,6 +1,6 @@
 body {
     font-family: 'Roboto';
-    background-color: #e5e5e5;
+    background-color: #ffffff;
 }
 
 button {
@@ -93,7 +93,7 @@ h4 {
 .section-body {
     display: flex;
     /* background-color: yellow; */
-    overflow: hidden;
+    overflow-x:scroll;
 }
 
 .item_display {
@@ -116,11 +116,14 @@ h4 {
     height: 87px;
 }
 
+.space {
+    margin-left: 16px;
+}
+
 .footer {
     position: fixed;
     width: 414px;
     height: 92px;
-    ;
     margin-left: -207px;
     background-color: #ffffff;
     bottom: 0;
@@ -141,4 +144,5 @@ h4 {
     height: 61px;
     padding: 8px 0;
     margin: 15px 25px;
+    text-align: center;
 }
