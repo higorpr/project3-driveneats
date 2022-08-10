@@ -1,0 +1,144 @@
+body {
+    font-family: 'Roboto';
+    background-color: #e5e5e5;
+}
+
+button {
+    border: none;
+}
+
+h1 {
+    font-family: 'Righteous', cursive;
+    font-size: 26px;
+    color: #333333;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-weight: 300;
+    font-size: 15px;
+    color: #a6a6a6;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+}
+
+.header {
+    background-color: #cf2b2b;
+    width: 414px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 92px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    margin-left: -207px;
+    z-index: 1;
+}
+
+.header h1 {
+    margin-bottom: 5px;
+}
+
+.title {
+    margin-left: 21px;
+    margin-top: 8px;
+    margin-bottom: 40px;
+}
+
+.title>h1 {
+    font-size: 44px;
+    color: #ffffff;
+}
+
+.header p {
+    color: #ffffff;
+    margin-bottom: 18px;
+}
+
+.content {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 414px;
+    height: 100%;
+    background-color: #e5e5e5;
+    margin-top: 96px;
+    padding-bottom: 16px;
+    margin-bottom: 92px;
+    box-sizing: border-box;
+}
+
+.content h1 {
+    margin-top: 27px;
+    margin-bottom: 17px;
+    margin-left: 19px;
+}
+
+.content-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-body {
+    display: flex;
+    /* background-color: yellow; */
+    overflow: hidden;
+}
+
+.item_display {
+    background-color: #ffffff;
+    width: 172px;
+    height: 210px;
+    box-shadow: 0px 0ox 10px -4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 14px;
+    box-sizing: border-box;
+}
+
+.item_display img {
+    margin-top: 18px;
+    margin-bottom: 8px;
+    width: 144px;
+    height: 87px;
+}
+
+.footer {
+    position: fixed;
+    width: 414px;
+    height: 92px;
+    ;
+    margin-left: -207px;
+    background-color: #ffffff;
+    bottom: 0;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.footer button {
+    border-radius: 50px;
+    font-family: 'Roboto';
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+    background-color: #cbcbcb;
+    width: 364px;
+    height: 61px;
+    padding: 8px 0;
+    margin: 15px 25px;
+}
