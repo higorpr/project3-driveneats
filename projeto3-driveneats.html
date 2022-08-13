@@ -24,17 +24,18 @@
 </head>
 
 <body>
-    <div class="header">
-        <div class="title">
-            <h1>
-                DrivenEats
-            </h1>
-            <p>
-                Sua comida em 6 minutos.
-            </p>
+    <header>
+        <div class="header">
+            <div class="title">
+                <h1>
+                    DrivenEats
+                </h1>
+                <p>
+                    Sua comida em 6 minutos.
+                </p>
+            </div>
         </div>
-    </div>
-
+    </header>
     <div class="content">
         <div class="content-section">
             <div class="section-header">
@@ -43,41 +44,56 @@
                 </h1>
             </div>
             <div class="section-body">
-                <div class="item_display">
-                    <img src="images/frango_yin_yang 1.png" alt="">
+                <div onclick='pickMeal(".meal", ".meal .hide")' class="item_display meal chicken">
+                    <img src="images/frango-fitness.jpg" alt="">
                     <h2>
-                        Frango Yin Yang
+                        Frango Fitness
                     </h2>
                     <h3>
-                        Um pouco de batata, um pouco de salada
+                        Pura proteína magra, ideal no cutting.
                     </h3>
-                    <h4>
-                        R$ 14,90
-                    </h4>
+                    <div class="price_check">
+                        <h4>
+                            R$ 24,00
+                        </h4>
+                        <figure>
+                            <img class="hide" src="images/checkmark-circle 1.png" alt="">
+                        </figure>
+                    </div>
                 </div>
-                <div class="item_display">
-                    <img src="images/frango_yin_yang 1.png" alt="">
+                <div onclick="pickMeal()" class="item_display meal meat">
+                    <img src="images/alcatra-fitness.jpg" alt="">
                     <h2>
-                        Frango Yin Yang
+                        Alcatra Maromba
                     </h2>
                     <h3>
-                        Um pouco de batata, um pouco de salada
+                        Uma explosão de proteína!
                     </h3>
-                    <h4>
-                        R$ 14,90
-                    </h4>
+                    <div class="price_check">
+                        <h4>
+                            R$ 32,00
+                        </h4>
+                        <figure>
+                            <img class="hide" src="images/checkmark-circle 1.png" alt="">
+                        </figure>
+                    </div>
                 </div>
-                <div class="item_display">
-                    <img src="images/frango_yin_yang 1.png" alt="">
+                <div onclick="pickMeal()" class="item_display meal burguer">
+                    <img src="images/hamburguer-maromba.jpg" alt="">
                     <h2>
-                        Frango Yin Yang
+                        Hamburgão Fit
                     </h2>
                     <h3>
-                        Um pouco de batata, um pouco de salada
+                        Feito especialmente pra sua dieta.
                     </h3>
-                    <h4>
-                        R$ 14,90
-                    </h4>
+                    <div class="price_check">
+                        <h4>
+                            R$ 30,00
+                        </h4>
+                        <figure>
+                            <img class="hide" src="images/checkmark-circle 1.png" alt="">
+                        </figure>
+                    </div>
                 </div>
                 <div class="space"></div>
             </div>
@@ -90,41 +106,56 @@
                 </h1>
             </div>
             <div class="section-body">
-                <div class="item_display">
-                    <img src="images/coquinha_gelada 1.png" alt="">
+                <div onclick="pickDrink()" class="item_display drink lemon">
+                    <img src="images/iced-tea-limao.jpeg" alt="">
                     <h2>
-                        Coquinha gelada
+                        Iced Tea Limão
                     </h2>
                     <h3>
-                        Lata 350ml
+                        Garrafa 450ml
                     </h3>
-                    <h4>
-                        R$ 4,90
-                    </h4>
+                    <div class="price_check">
+                        <h4>
+                            R$ 6,10
+                        </h4>
+                        <figure>
+                            <img class="hide" src="images/checkmark-circle 1.png" alt="">
+                        </figure>
+                    </div>
                 </div>
-                <div class="item_display">
-                    <img src="images/coquinha_gelada 1.png" alt="">
+                <div onclick="pickDrink()" class="item_display drink peach">
+                    <img src="images/iced-tea-pessego.jpeg" alt="">
                     <h2>
-                        Coquinha gelada
+                        Iced Tea Pessego
                     </h2>
                     <h3>
-                        Lata 350ml
+                        Garrafa 450ml
                     </h3>
-                    <h4>
-                        R$ 4,90
-                    </h4>
+                    <div class="price_check">
+                        <h4>
+                            R$ 6,00
+                        </h4>
+                        <figure>
+                            <img class="hide" src="images/checkmark-circle 1.png" alt="">
+                        </figure>
+                    </div>
                 </div>
-                <div class="item_display">
-                    <img src="images/coquinha_gelada 1.png" alt="">
+                <div onclick="pickDrink()" class="item_display drink whey">
+                    <img src="images/Whey-drink.jpg" alt="">
                     <h2>
-                        Coquinha gelada
+                        Whey Drink Italac
                     </h2>
                     <h3>
-                        Lata 350ml
+                        250ml
                     </h3>
-                    <h4>
-                        R$ 4,90
-                    </h4>
+                    <div class="price_check">
+                        <h4>
+                            R$ 8,00
+                        </h4>
+                        <figure>
+                            <img class="hide" src="images/checkmark-circle 1.png" alt="">
+                        </figure>
+                    </div>
                 </div>
                 <div class="space"></div>
             </div>
@@ -137,41 +168,56 @@
                 </h1>
             </div>
             <div class="section-body">
-                <div class="item_display">
-                    <img src="images/pudim 1.png" alt="">
+                <div onclick="pickDessert()" class="item_display dessert brownie">
+                    <img src="images/brownie-whey.jpg" alt="">
                     <h2>
-                        Pudim
+                        Brownie de Whey
                     </h2>
                     <h3>
-                        Apensa pudim
+                        Pouco calórico e proteico
                     </h3>
-                    <h4>
-                        R$ 7,90
-                    </h4>
+                    <div class="price_check">
+                        <h4>
+                            R$ 12,00
+                        </h4>
+                        <figure>
+                            <img class="hide" src="images/checkmark-circle 1.png" alt="">
+                        </figure>
+                    </div>
                 </div>
-                <div class="item_display">
-                    <img src="images/pudim 1.png" alt="">
+                <div onclick="pickDessert()" class="item_display dessert ice">
+                    <img src="images/taça-maromba.jpg" alt="">
                     <h2>
-                        Pudim
+                        Taça maromba
                     </h2>
                     <h3>
-                        Apensa pudim
+                        Seleção de sorvetes fitness
                     </h3>
-                    <h4>
-                        R$ 7,90
-                    </h4>
+                    <div class="price_check">
+                        <h4>
+                            R$ 15,00
+                        </h4>
+                        <figure>
+                            <img class="hide" src="images/checkmark-circle 1.png" alt="">
+                        </figure>
+                    </div>
                 </div>
-                <div class="item_display">
-                    <img src="images/pudim 1.png" alt="">
+                <div onclick="pickDessert()" class="item_display dessert pie">
+                    <img src="images/torta-alemã.jpg" alt="">
                     <h2>
-                        Pudim
+                        Torta Alemã
                     </h2>
                     <h3>
-                        Apensa pudim
+                        É gordice mesmo, fazer o quê?
                     </h3>
-                    <h4>
-                        R$ 7,90
-                    </h4>
+                    <div class="price_check">
+                        <h4>
+                            R$ 12,90
+                        </h4>
+                        <figure>
+                            <img class="hide" src="images/checkmark-circle 1.png" alt="">
+                        </figure>
+                    </div>
                 </div>
                 <div class="space"></div>
             </div>

@@ -93,7 +93,7 @@ h4 {
 .section-body {
     display: flex;
     /* background-color: yellow; */
-    overflow-x:scroll;
+    overflow-x: scroll;
 }
 
 .item_display {
@@ -109,11 +109,26 @@ h4 {
     box-sizing: border-box;
 }
 
+.picked {
+    box-shadow: inset 0px 0px 1px 5px #32B72F;
+}
+
 .item_display img {
     margin-top: 18px;
     margin-bottom: 8px;
     width: 144px;
     height: 87px;
+}
+
+.price_check {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price_check img {
+    width: 19px;
+    height: 19px;
+    margin: 0px;
 }
 
 .space {
@@ -145,4 +160,8 @@ h4 {
     padding: 8px 0;
     margin: 15px 25px;
     text-align: center;
+}
+
+.hide {
+    display: none;
 }
