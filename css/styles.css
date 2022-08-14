@@ -152,7 +152,7 @@ h4 {
 
 }
 
-.footer button {
+.ok_button {
     border-radius: 50px;
     font-family: 'Roboto';
     color: white;
@@ -170,6 +170,6 @@ h4 {
     display: none;
 }
 
-/* .checkmark {
-    display: initial;
-} */
+.green {
+    background-color: #32B72F;
+}

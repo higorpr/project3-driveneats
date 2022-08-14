@@ -53,6 +53,17 @@ function pickBox(box, target_check) {
 }
 
 function okOrder () {
-    texto = document.querySelector('.footer p')
-    console.log(texto)
+    let ok = true
+    for (i=0; i < ok_list.length; i++) {
+        if (ok_list[i] === false) {
+            ok = false
+            break
+        }
+    }
+    if (ok === true) {
+        texto = document.querySelector('.footer p')
+        texto.innerHTML = 'Fechar pedido'
+        texto.parentElement.classList.add('green')
+        
+    }    
 }
