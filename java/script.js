@@ -131,7 +131,26 @@ function clickOrder(button) {
 }
 
 function clickConfirm() {
+    let client_name = prompt('Qual o seu nome?')
+    let client_address = prompt('Qual o endereço de entrega?')
+    let total_price_str = total.toFixed(2).toString()
+    total_price_str = total_price_str.replace('.', ',')
+    total_price_entry = `R$ ${total_price_str}`
 
+    let text = `Olá, gostaria de fazer o pedido:
+    - Prato: ${meal}
+    - Bebida: ${drink}
+    - Sobremesa: ${dessert}
+    Total: ${total_price_str}
+    
+    Nome: ${client_name}
+    Endereço: ${client_address}`
+
+    text = encodeURIComponent(text)
+
+    let uri = `https://wa.me/5521997240416?text=${text}`
+    
+    window.location.assign(uri)
 }
 
 function clickCancel() {

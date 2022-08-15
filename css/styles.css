@@ -73,7 +73,7 @@ h4 {
     width: 414px;
     height: 100%;
     background-color: #e5e5e5;
-    margin-top: 96px;
+    margin-top: 92px;
     padding-bottom: 16px;
     margin-bottom: 92px;
     box-sizing: border-box;
@@ -100,7 +100,7 @@ h4 {
     background-color: #ffffff;
     width: 172px;
     height: 210px;
-    box-shadow: 0px 0ox 10px -4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 0.5px 0px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
     margin-left: 16px;
     display: flex;
@@ -246,6 +246,10 @@ h4 {
     margin-top: 11px;
 }
 
+.go_button:hover {
+    cursor: pointer;
+}
+
 .cancel_button {
     color: #ffffff;
     background-color: #50d074;
@@ -253,4 +257,8 @@ h4 {
     height: 52px;
     border-radius: 100px;
     font-size: 22px;
+}
+
+.cancel_button:hover {
+    cursor: pointer;
 }
