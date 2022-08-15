@@ -60,7 +60,7 @@ function pickBox(box, target_check) {
     // Getting price of picked item
     let price = document.querySelector(price_tag).innerText.replace(',', '.')
     let item_name = document.querySelector(name_tag).innerText
-    if (section === '.meal') {        
+    if (section === '.meal') {
         price_meal = Number(price.slice(3))
         meal = item_name
         console.log(price_meal)
@@ -121,7 +121,7 @@ function clickOrder(button) {
     document.querySelector('.meal_cost').innerText = meal_price_entry
     document.querySelector('.drink_cost').innerText = drink_price_entry
     document.querySelector('.dessert_cost').innerText = dessert_price_entry
-    document.querySelector('.total_cost').innerText = total_price_entry    
+    document.querySelector('.total_cost').innerText = total_price_entry
 
     document.querySelector('.transparency').classList.remove('hide')
     document.querySelector('.end_alert').classList.remove('hide')
@@ -149,7 +149,7 @@ function clickConfirm() {
     text = encodeURIComponent(text)
 
     let uri = `https://wa.me/5521997240416?text=${text}`
-    
+
     window.location.assign(uri)
 }
 
