@@ -225,11 +225,64 @@
     </div>
 
     <div class="footer">
-        <button onclick='orderClick(this)' class="ok_button">
+        <button onclick='clickOrder(this)' class="ok_button">
             <p>
                 Selecione os 3 itens para fechar o pedido
             </p>
         </button>
+    </div>
+
+    <div class="end_alert hide">
+        <div class="alert_title">
+            <h1>
+                Confirme seu pedido
+            </h1>
+        </div>
+        <div class="alert_content">
+            <div class="alert_entry">
+                <p class="meal_name">
+                    Frango
+                </p>
+                <p class="meal_cost">
+                    R$ 1,00
+                </p>
+            </div>
+            <div class="alert_entry">
+                <p class="drink_name">
+                    Bebida
+                </p>
+                <p class="drink_cost">
+                    R$ 1,00
+                </p>
+            </div>
+            <div class="alert_entry">
+                <p class="dessert_name">
+                    Sobremesa
+                </p>
+                <p class="dessert_cost">
+                    R$ 1,00
+                </p>
+            </div>
+            <div class="alert_entry bold">
+                <p>
+                    TOTAL
+                </p>
+                <p class="total_cost">
+                    R$ 1,00
+                </p>
+            </div>
+            <button onclick="clickConfirm()" class="go_button bold">
+                Tudo certo, pode pedir!
+            </button>
+            <button onclick="clickCancel()" class="cancel_button bold">
+                Cancelar
+            </button>
+        </div>
+
+    </div>
+
+    <div class="transparency hide">
+
     </div>
 
     <script src="java/script.js"></script>

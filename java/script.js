@@ -3,6 +3,9 @@ let price_meal = 0;
 let price_drink = 0;
 let price_dessert = 0;
 let total = 0;
+let meal = '';
+let drink = '';
+let dessert = '';
 
 function pickBox(box, target_check) {
     // Defining which section the click took place:    
@@ -19,6 +22,7 @@ function pickBox(box, target_check) {
     picked_box = `${section} .picked` // Tag to check which box is selected
     picked_checkmark = `${section} .checkmark` // Tag to check where the checkmark is
     price_tag = picked_box + ' h4' // Tag to check price of selected item
+    name_tag = picked_box + ' h2' // Tag to check name of selected item
 
     const last_picked_box = document.querySelector(picked_box)
     const last_picked_checkmark = document.querySelector(picked_checkmark)
@@ -55,23 +59,30 @@ function pickBox(box, target_check) {
 
     // Getting price of picked item
     let price = document.querySelector(price_tag).innerText.replace(',', '.')
+    let item_name = document.querySelector(name_tag).innerText
     if (section === '.meal') {        
         price_meal = Number(price.slice(3))
+        meal = item_name
         console.log(price_meal)
+        console.log(meal)
     } else if (section === '.drink') {
         price_drink = Number(price.slice(3))
+        drink = item_name
         console.log(price_drink)
+        console.log(drink)
     } else {
         price_dessert = Number(price.slice(3))
+        dessert = item_name
         console.log(price_dessert)
+        console.log(dessert)
     }
 
-    okOrder() // Function to turn footer button green
+    greenOrder() // Function to turn footer button green
 
     total = price_meal + price_drink + price_dessert
 }
 
-function okOrder() {
+function greenOrder() {
     let ok = true // Items selection check variable
     for (i = 0; i < ok_list.length; i++) {
         if (ok_list[i] === false) {
@@ -83,12 +94,47 @@ function okOrder() {
         texto = document.querySelector('.footer p')
         texto.innerHTML = 'Fechar pedido'
         texto.parentElement.classList.add('green')
-
     }
 }
 
-function orderClick(button) {
-    if (button.classList.contains('green')) {
-        alert(`O total do seu pedido é: R$ ${total}.`)
-    }
+function clickOrder(button) {
+    let meal_price_str = price_meal.toFixed(2).toString()
+    meal_price_str = meal_price_str.replace('.', ',')
+    meal_price_entry = `R$ ${meal_price_str}`
+
+    let drink_price_str = price_drink.toFixed(2).toString()
+    drink_price_str = drink_price_str.replace('.', ',')
+    drink_price_entry = `R$ ${drink_price_str}`
+
+    let dessert_price_str = price_dessert.toFixed(2).toString()
+    dessert_price_str = dessert_price_str.replace('.', ',')
+    dessert_price_entry = `R$ ${dessert_price_str}`
+
+    let total_price_str = total.toFixed(2).toString()
+    total_price_str = total_price_str.replace('.', ',')
+    total_price_entry = `R$ ${total_price_str}`
+
+    document.querySelector('.meal_name').innerText = meal
+    document.querySelector('.drink_name').innerText = drink
+    document.querySelector('.dessert_name').innerText = dessert
+
+    document.querySelector('.meal_cost').innerText = meal_price_entry
+    document.querySelector('.drink_cost').innerText = drink_price_entry
+    document.querySelector('.dessert_cost').innerText = dessert_price_entry
+    document.querySelector('.total_cost').innerText = total_price_entry    
+
+    document.querySelector('.transparency').classList.remove('hide')
+    document.querySelector('.end_alert').classList.remove('hide')
+    // if (button.classList.contains('green')) {
+    //     alert(`O total do seu pedido é: R$ ${total}.`)
+    // }
+}
+
+function clickConfirm() {
+
+}
+
+function clickCancel() {
+    document.querySelector('.transparency').classList.add('hide')
+    document.querySelector('.end_alert').classList.add('hide')
 }
