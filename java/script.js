@@ -6,6 +6,7 @@ let total = 0;
 let meal = '';
 let drink = '';
 let dessert = '';
+let order_complete = false;
 
 function pickBox(box, target_check) {
     // Defining which section the click took place:    
@@ -94,10 +95,13 @@ function greenOrder() {
         texto = document.querySelector('.footer p')
         texto.innerHTML = 'Fechar pedido'
         texto.parentElement.classList.add('green')
+        order_complete = true
     }
 }
 
 function clickOrder(button) {
+    if (order_complete===true) {
+
     let meal_price_str = price_meal.toFixed(2).toString()
     meal_price_str = meal_price_str.replace('.', ',')
     meal_price_entry = `R$ ${meal_price_str}`
@@ -128,6 +132,7 @@ function clickOrder(button) {
     // if (button.classList.contains('green')) {
     //     alert(`O total do seu pedido é: R$ ${total}.`)
     // }
+    }
 }
 
 function clickConfirm() {
